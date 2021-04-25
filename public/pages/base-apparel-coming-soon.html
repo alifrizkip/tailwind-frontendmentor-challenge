@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | social proof section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="font-josefin bg-gradient-to-b from-white to-[#fff5f5]">
+  <div class="max-w-[375px] mx-auto xl:max-w-full xl:flex xl:flex-row-reverse">
+    <div class="hidden xl:block xl:h-screen xl:w-2/5 xl:bg-opacity-10 xl:bg-cover xl:bg-top"
+      style="background-image: url('../images/base-apparel-coming-soon/hero-desktop.jpg');">
+    </div>
+
+    <div class="text-center xl:text-left xl:w-3/5 relative">
+      <img class="hidden xl:block absolute z-[-999] h-full w-full top-0 left-0"
+        src="../images/base-apparel-coming-soon/bg-pattern-desktop.svg">
+
+      <div class="xl:max-w-lg xl:mx-auto">
+        <div class="p-8 xl:pt-14">
+          <img class="h-6" src="/images/base-apparel-coming-soon/logo.svg">
+        </div>
+
+        <div class="xl:hidden">
+          <img src="../images/base-apparel-coming-soon/hero-mobile.jpg">
+        </div>
+
+        <div class="px-8 py-10">
+          <div class="uppercase text-4xl tracking-widest mb-6 xl:text-6xl">
+            <div class="text-[#ce9797] font-extralight">We're</div>
+            <div class="text-gray-900">coming</div>
+            <div class="text-gray-900">soon</div>
+          </div>
+
+          <p class="text-[#ce9797] text-sm mb-6 leading-6 xl:leading-8">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+
+          <div class="mb-12 relative">
+            <input
+              class="w-full px-4 py-2 bg-transparent border border-[#ce9797] rounded-full placeholder-[#e7cbcb] text-sm"
+              type="text" name="email" id="" placeholder="Email Address">
+
+            <button
+              class="px-6 py-2 absolute top-0 right-0 rounded-full h-full bg-gradient-to-br from-[#f8bfbf] to-[#ee8c8c] shadow-2xl">
+              <img src="../images/base-apparel-coming-soon/icon-arrow.svg">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

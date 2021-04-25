@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="font-kumbh bg-[#19a2ae]">
+  <div class="px-4 h-screen items-center flex relative overflow-hidden">
+    <img class="w-full absolute top-[-50vw] left-[-50%] z-0 lg:left-[-25%] lg:top-[-75vw]"
+      src="/images/profile-card-component/bg-pattern-top.svg" alt="" srcset="">
+
+    <img class="w-full absolute bottom-[-50vw] right-[-50%] z-0 lg:right-[-25%] lg:bottom-[-75vw]"
+      src="/images/profile-card-component/bg-pattern-bottom.svg" alt="" srcset="">
+
+    <div class="min-w-[20rem] mx-auto shadow-2xl bg-white rounded-xl z-50 lg:min-w-[23rem]">
+      <div class="bg-blue-400 rounded-t-xl h-36"
+        style="background-image: url(/images/profile-card-component/bg-pattern-card.svg);">
+      </div>
+
+      <div class="flex flex-col items-center border border-b pb-6 relative">
+        <div class="absolute top-[-52px]">
+          <img class="rounded-full border-4 border-white" src="/images/profile-card-component/image-victor.jpg" alt=""
+            srcset="">
+        </div>
+
+        <div class="mt-16">
+          <span class="font-bold text-lg">Victor Crest</span>
+          &nbsp;
+          <span class="text-gray-500">26</span>
+        </div>
+        <div class="text-gray-500 text-sm">London</div>
+      </div>
+
+      <div class="py-6 px-8 flex justify-between">
+        <div class="flex flex-col items-center">
+          <div class="font-semibold text-lg">80K</div>
+          <div class="text-xs text-gray-500">Followers</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="font-semibold text-lg">803K</div>
+          <div class="text-xs text-gray-500">Likes</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="font-semibold text-lg">1.4K</div>
+          <div class="text-xs text-gray-500">Photos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

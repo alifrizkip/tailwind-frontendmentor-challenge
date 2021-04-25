@@ -1,0 +1,22 @@
+{
+  "name": "intro-component-with-signup-form-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production postcss tailwind.css -o ./public/style.css",
+    "watch": "NODE_ENV=development postcss tailwind.css -o ./public/style.css -w",
+    "serve": "vite -r ./public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.1.5"
+  }
+}
