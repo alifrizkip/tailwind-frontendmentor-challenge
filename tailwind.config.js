@@ -17,7 +17,8 @@ module.exports = {
         'big-shoulders': "Big Shoulders Display",
         'kumbh': "Kumbh Sans",
         'spartan': "Spartan",
-        'josefin': "Josefin Sans"
+        'josefin': "Josefin Sans",
+        'manrope': "Manrope"
       })
     },
   },
