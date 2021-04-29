@@ -20,22 +20,24 @@
 
 <body class="font-inter bg-white">
 
-  <div class="pt-12 relative flex flex-col justify-center items-center xl:h-screen xl:flex xl:flex-row-reverse xl:pt-0">
+  <div x-data="slider()"
+    class="pt-12 relative flex flex-col justify-center items-center xl:h-screen xl:flex xl:flex-row-reverse xl:pt-0">
     <!-- flex item -->
     <div class="max-w-xs mx-auto bg-contain bg-no-repeat xl:max-w-none xl:w-1/2 xl:mx-0 xl:mr-20"
       style="background-image: url(../images/coding-bootcamp-testimonials-slider/pattern-bg.svg);">
       <div class="p-8 xl:p-16">
         <div class="relative">
-          <img class=" shadow-xl" src="../images/coding-bootcamp-testimonials-slider/image-tanya.jpg" alt="">
+          <img x-bind:src="testimoni().photo" class=" shadow-xl"
+            src="../images/coding-bootcamp-testimonials-slider/image-tanya.jpg" alt="">
 
           <div
             class="absolute mx-auto left-0 right-0 text-center xl:mx-0 xl:text-left bottom-[-1rem] xl:left-[10%] xl:bottom-[-1.5rem]">
             <div class="bg-white inline-block rounded-full shadow-xl">
               <div class="flex items-center">
-                <button class="py-3 px-4 xl:py-4 xl:px-5">
+                <button @click="prev" class="py-3 px-4 xl:py-4 xl:px-5">
                   <img class="h-3 xl:h-4" src="../images/coding-bootcamp-testimonials-slider/icon-prev.svg" alt="">
                 </button>
-                <button class="py-3 px-4 xl:py-4 xl:px-5">
+                <button @click="next" class="py-3 px-4 xl:py-4 xl:px-5">
                   <img class="h-3 xl:h-4" src="../images/coding-bootcamp-testimonials-slider/icon-next.svg" alt="">
                 </button>
               </div>
@@ -54,15 +56,15 @@
         style="background-image: url(../images/coding-bootcamp-testimonials-slider/pattern-quotes.svg);"></div>
 
       <div class="xl:absolute xl:w-[44rem] xl:top-[15%]">
-        <p class="font-light text-lg xl:text-4xl xl:leading-normal">
+        <p x-text="testimoni().text" class="font-light text-lg xl:text-4xl xl:leading-normal">
           “ I’ve been interested in coding for a while but never taken the jump, until now.
           I couldn’t recommend this course enough. I’m now in the job of my dreams and so
           excited about the future. ”
         </p>
 
         <div class="xl:space-x-2 xl:text-xl">
-          <p class="mt-4 font-bold xl:inline-block">Tanya Sinclair</p>
-          <p class="text-gray-300 text-sm xl:inline-block">UX Engineer</p>
+          <p x-text="testimoni().name" class="mt-4 font-bold xl:inline-block">Tanya Sinclair</p>
+          <p x-text="testimoni().position" class="text-gray-300 text-sm xl:inline-block xl:text-xl">UX Engineer</p>
         </div>
       </div>
     </div>
@@ -72,6 +74,43 @@
       src="../images/coding-bootcamp-testimonials-slider/pattern-curve.svg" alt="">
   </div>
 
+  <script>
+    function slider() {
+      return {
+        datas: [{
+            name: 'Tanya Sinclair',
+            position: 'UX Engineer',
+            text: `“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”`,
+            photo: '../images/coding-bootcamp-testimonials-slider/image-tanya.jpg'
+          },
+          {
+            name: 'John Tarkpor',
+            position: 'Junior Front-end Developer',
+            text: `“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”`,
+            photo: '../images/coding-bootcamp-testimonials-slider/image-john.jpg'
+          }
+        ],
+        idx: 0,
+        testimoni() {
+          return this.datas[this.idx];
+        },
+        next() {
+          if (this.idx + 1 === this.datas.length) {
+            this.idx = 0;
+          } else {
+            this.idx += 1
+          }
+        },
+        prev() {
+          if (this.idx === 0) {
+            this.idx = this.datas.length - 1;
+          } else {
+            this.idx -= 1
+          }
+        },
+      }
+    }
+  </script>
 </body>
 
 </html>
