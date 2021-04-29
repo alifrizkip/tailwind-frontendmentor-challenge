@@ -18,7 +18,8 @@ module.exports = {
         'kumbh': "Kumbh Sans",
         'spartan': "Spartan",
         'josefin': "Josefin Sans",
-        'manrope': "Manrope"
+        'manrope': "Manrope",
+        'inter': 'Inter'
       })
     },
   },
